@@ -1,26 +1,34 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+    render() {
+        return (
+            <div className="text-center">
+                <header className="bg-blue-400 m-6 p-6 rounded shadow-lg">
+                    <img src={logo} className="App-logo" alt="logo" />
+                    <h1 className="text-white text-3xl">Welcome to React</h1>
+                </header>
+                <div className="text-base pt-4">
+                    <a
+                        className="bg-purple-800 text-white p-3 rounded no-underline hover:bg-purple-dark mr-2"
+                        href="https://medium.com/@Landish/how-to-use-tailwind-css-with-react-16e9d478b8b1"
+                        target="_blank"
+                    >
+                        Post on Medium
+                    </a>
+                    <a
+                        className="bg-purple-800 text-white p-3 rounded no-underline hover:bg-purple-dark ml-2"
+                        href="https://github.com/Landish/react-tailwindcss-demo"
+                        target="_blank"
+                    >
+                        Source on Github
+                    </a>
+                </div>
+            </div>
+        );
+    }
 }
 
 export default App;
